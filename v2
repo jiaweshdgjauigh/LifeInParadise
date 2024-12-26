@@ -1,0 +1,574 @@
+
+--[[
+ INFORMATION
+ 
+-466.315002, -312.666718, 38.8675575, 0.920837939, 0.0563694239, -0.385849535, -0.0611009821, 0.998131573, -9.43366985e-09, 0.385128617, 0.023575794, 0.922561705
+ ^^ void (trolley tp to part)
+ 
+ -773.702026, 38.9981499, -102.357529, 0.0195926279, 6.42549403e-10, 0.999808073, 5.13658165e-08, 1, -1.64925729e-09, -0.999808073, 5.13882696e-08, 0.0195926279
+ 
+ -691.372681, 39.0300217, 319.092529, -0.999946415, 1.11303597e-08, 0.010353677, 1.13734311e-08, 1, 2.34179627e-08, -0.010353677, 2.3534465e-08, -0.999946415
+
+-617.345764, 38.9999809, 250.452499, 0.0121481363, -2.66477009e-08, -0.999926209, -2.62175792e-08, 1, -2.69681859e-08, 0.999926209, 2.65432583e-08, 0.0121481363
+
+-594.074097, 38.9999962, -339.610596, 0.998510003, 9.94147609e-09, -0.0545693524, -1.05404059e-08, 1, -1.06877547e-08, 0.0545693524, 1.12470131e-08, 0.998510003
+]]
+
+-- SET up
+
+local mall = game.Workspace:FindFirstChild("Mall")
+
+if mall then
+    for _, child in ipairs(mall:GetChildren()) do
+        if child:IsA("Model") and child.Name == "Table of Manikins" then
+            for _, subChild in ipairs(child:GetChildren()) do
+                if subChild:IsA("Model") and subChild.Name == " " then
+                    subChild:Destroy()
+                end
+            end
+        end
+    end
+else
+    warn("Mall not found in Workspace.")
+end
+
+
+
+
+
+
+-- -466.315002, -312.666718, 38.8675575, 0.920837939, 0.0563694239, -0.385849535, -0.0611009821, 0.998131573, -9.43366985e-09, 0.385128617, 0.023575794, 0.922561705
+local voidpartKILL = Instance.new("Part", game.Workspace)
+voidpartKILL.Anchored = true
+voidpartKILL.Name = "voidpartKILL"
+voidpartKILL.CFrame = CFrame.new(-466.315002, -312.666718, 38.8675575, 0.920837939, 0.0563694239, -0.385849535, -0.0611009821, 0.998131573, -9.43366985e-09, 0.385128617, 0.023575794, 0.922561705)
+local nakedpartTP = Instance.new("Part", game.Workspace)
+nakedpartTP.Anchored = true
+nakedpartTP.Name = "nakedpartTP"
+nakedpartTP.CFrame = CFrame.new(-826.404053, 39.1699982, -297.634583, 0.999818444, -5.11469045e-09, 0.0190541465, 5.12741227e-09, 1, -6.18803397e-10, -0.0190541465, 7.16389503e-10, 0.999818444)
+nakedpartTP.CanCollide = false
+local jailpartTP = Instance.new("Part", game.Workspace)
+jailpartTP.Anchored = true
+jailpartTP.CFrame = CFrame.new(-673.230713, 38.9999809, 175.896744, -0.999933362, 3.16523767e-08, -0.0115419691, 3.1168863e-08, 1, 4.20716333e-08, 0.0115419691, 4.17090789e-08, -0.999933362)
+jailpartTP.CanCollide = false
+local mermaidpartTP = Instance.new("Part", game.Workspace)
+mermaidpartTP.Anchored = true
+mermaidpartTP.Name = "mermaidpartTP"
+mermaidpartTP.CFrame = CFrame.new(-732.558411, 39.0014038, -389.309692, -0.697384179, 1.09058604e-07, 0.716697514, 6.38424211e-08, 1, -9.00462354e-08, -0.716697514, -1.70411187e-08, -0.697384179)
+mermaidpartTP.CanCollide = false
+local niggerifyTP = Instance.new("Part", game.Workspace)
+niggerifyTP.Anchored = true
+niggerifyTP.CanCollide = false
+niggerifyTP.CFrame = CFrame.new(-815.987183, 39.1699982, -356.583588, 0.997641325, 1.14539516e-08, 0.0686426833, -1.28776794e-08, 1, 2.02986445e-08, -0.0686426833, -2.11347242e-08, 0.997641325)
+local unniggerify = Instance.new("Part", game.Workspace)
+unniggerify.Anchored = true
+unniggerify.CanCollide = false
+unniggerify.CFrame = CFrame.new(-840.765625, 39.1699982, -357.197449, 0.999838352, 5.79481041e-09, 0.0179804824, -5.82543214e-09, 1, 1.6506887e-09, -0.0179804824, -1.75516601e-09, 0.999838352)
+
+local cartp = Instance.new("Part", game.Workspace)
+cartp.Anchored = true
+cartp.CanCollide = false
+cartp.CFrame = CFrame.new(-691.372681, 39.0300217, 319.092529, -0.999946415, -3.98014137e-08, 0.010353677, -4.06713063e-08, 1, -8.38075067e-08, -0.010353677, -8.42241121e-08, -0.999946415)
+
+local buyhouseTP = Instance.new("Part", game.Workspace)
+buyhouseTP.Anchored = true
+buyhouseTP.CanCollide = false
+buyhouseTP.CFrame = CFrame.new(-773.702026, 38.9981499, -102.357529, 0.0195926279, 6.42549403e-10, 0.999808073, 5.13658165e-08, 1, -1.64925729e-09, -0.999808073, 5.13882696e-08, 0.0195926279)
+
+local policeCarTP = Instance.new("Part", game.Workspace)
+policeCarTP.Anchored = true
+policeCarTP.CanCollide = false
+policeCarTP.CFrame = CFrame.new(-617.345764, 38.9999809, 250.452499, 0.0121481363, -2.66477009e-08, -0.999926209, -2.62175792e-08, 1, -2.69681859e-08, 0.999926209, 2.65432583e-08, 0.0121481363)
+
+local firetruckTP = Instance.new("Part", game.Workspace)
+firetruckTP.Anchored = true
+firetruckTP.CanCollide = false
+firetruckTP.CFrame = CFrame.new(-594.074097, 38.9999962, -339.610596, 0.998510003, 9.94147609e-09, -0.0545693524, -1.05404059e-08, 1, -1.06877547e-08, 0.0545693524, 1.12470131e-08, 0.998510003)
+
+local killv2 = Instance.new("Part", game.Workspace)
+killv2.Anchored = true
+killv2.CanCollide = true
+killv2.CFrame = CFrame.new(-634.376404, 45.2578468, 146.385147, 0.023106873, 5.4108721e-11, 0.999732971, 2.21919247e-08, 1, -5.67046132e-10, -0.999732971, 2.2199103e-08, 0.023106873)
+--
+
+local loadingInfo = Instance.new("Message", game.Workspace)
+loadingInfo.Name = "LoadingInfo"
+loadingInfo.Text = "Loading."
+wait(10)
+loadingInfo:Destroy()
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local localplayer = game.Players.LocalPlayer
+local stroller = localplayer.Backpack.Stroller
+
+local TweenService = game:GetService("TweenService")
+
+local function tweenToVoid(player, duration)
+    local character = localplayer.Character
+    local rootPart = character:WaitForChild("HumanoidRootPart")
+    local goalPosition = Vector3.new(0, -500, 0) -- Void position
+    local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
+
+    -- Create and play the Tween
+    local tween = TweenService:Create(rootPart, tweenInfo, {Position = goalPosition})
+    tween:Play()
+end
+
+
+local tool = localplayer.Backpack.Stroller
+local part = tool:WaitForChild("Colr")
+local rainbowRunning = false 
+local hue = 0
+local function HSVToRGB(h, s, v)
+    local i = math.floor(h * 6)
+    local f = h * 6 - i
+    local p = v * (1 - s)
+    local q = v * (1 - f * s)
+    local t = v * (1 - (1 - f) * s)
+
+    i = i % 6
+    if i == 0 then
+        return v, t, p
+    elseif i == 1 then
+        return q, v, p
+    elseif i == 2 then
+        return p, v, t
+    elseif i == 3 then
+        return p, q, v
+    elseif i == 4 then
+        return t, p, v
+    elseif i == 5 then
+        return v, p, q
+    end
+end
+
+local function startRainbow()
+    rainbowRunning = true
+    while rainbowRunning do
+        hue = hue + 0.01
+        if hue > 1 then hue = 0 end
+        local r, g, b = HSVToRGB(hue, 1, 1)
+        part.Color = Color3.new(r, g, b)
+
+        task.wait(0.03) 
+    end
+end
+
+
+local function stopRainbow()
+    rainbowRunning = false
+end
+---------------------------------------
+
+
+local Window = Rayfield:CreateWindow({
+   Name = "Life in paradise script",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "v2",
+   LoadingSubtitle = "by LoadstringEnabIed",
+   Theme = getgenv().themes, -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("UI Settings")
+
+local Button = Tab:CreateButton({
+   Name = "Destroy UI",
+   Callback = function()
+    Rayfield:Destroy()
+   end,
+})
+local targetUsername = "" -- Variable to store the inputted username
+
+local Tab = Window:CreateTab("Stroller", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Kill")
+
+local Input5 = Tab:CreateInput({
+   Name = "Victim",
+   CurrentValue = "",
+   PlaceholderText = "Username NOT DISPLAY",
+   RemoveTextAfterFocusLost = false,
+   Flag = "Input1",
+   Callback = function(Text)
+      targetUsername = Text -- Update the target username
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Goto victim",
+   Callback = function()
+       local targetGoto = game.Players:FindFirstChild(targetUsername)
+       if targetGoto then
+           localplayer.Character.HumanoidRootPart.CFrame = targetGoto.Character.HumanoidRootPart.CFrame
+    elseif not nakedVictim then
+        Rayfield:Notify({
+        Title = "Couldnt find victim!",
+        Content = "Please check if victim is still in the server.",
+        Duration = 6.5,
+        Image = 4483362458,
+    })
+        end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Void kill Player",
+   Callback = function()
+       local originalPos = localplayer.Character.HumanoidRootPart.CFrame
+       local victimPlayer = game.Players:FindFirstChild(targetUsername)
+       if victimPlayer then
+           localplayer.Backpack.Stroller.Parent = localplayer.Character
+           localplayer.Character["Left Leg"].CFrame = game.Workspace.voidpartKILL.CFrame
+           wait(0.25)
+           victimPlayer.Character.HumanoidRootPart.CFrame = localplayer.Character.Stroller.MainPart.CFrame
+           wait(1.25)
+           localplayer.Character.Stroller.Parent = localplayer.Backpack
+           wait(0.5)
+           localplayer.Character.HumanoidRootPart.CFrame = originalPos
+                   Rayfield:Notify({
+        Title = "Information",
+        Content = "Reset to use stroller buttons on victim again.",
+        Duration = 6.5,
+        Image = 4483362458,
+    })
+    elseif not victimPlayer then
+        Rayfield:Notify({
+        Title = "Couldnt find victim!",
+        Content = "Please check if victim is still in the server.",
+        Duration = 6.5,
+        Image = 4483362458,
+    })
+        end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Kill v2",
+   Callback = function()
+        local originalPos = localplayer.Character.HumanoidRootPart.CFrame
+       local victimPlayer = game.Players:FindFirstChild(targetUsername)
+       localplayer.Character["Left Leg"].CFrame = killv2.CFrame
+       localplayer.Backpack.Stroller.Parent = localplayer.Character
+       wait(0.25)
+       victimPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.Stroller.MainPart.CFrame
+       
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Make player naked",
+   Callback = function()
+       local ogPos = localplayer.Character.HumanoidRootPart.CFrame
+       local nakedVictim = game.Players:FindFirstChild(targetUsername)
+       local victimsOgPos = nakedVictim.Character.HumanoidRootPart.CFrame
+       if nakedVictim then
+           localplayer.Character.HumanoidRootPart.CFrame = nakedpartTP.CFrame
+           localplayer.Backpack.Stroller.Parent = localplayer.Character
+           wait(0.25)
+           nakedVictim.Character.HumanoidRootPart.CFrame = localplayer.Character.Stroller.MainPart.CFrame
+           wait(1.25)
+           localplayer.Character.Stroller.Parent = localplayer.Backpack
+           wait(0.15)
+           localplayer.Character.HumanoidRootPart.CFrame = victimsOgPos
+           wait(1.25)
+           localplayer.Backpack.Stroller.Parent = localplayer.Character
+           wait(0.05)
+           victimPlayer.Character.HumanoidRootPart.CFrame = localplayer.Character.Stroller.MainPart.CFrame
+           wait(1.25)
+           localplayer.Character.Stroller.Parent = localplayer.Backpack
+           wait(0.05)
+           localplayer.Character.HumanoidRootPart.CFrame = ogPos
+    elseif not nakedVictim then
+        Rayfield:Notify({
+        Title = "Couldnt find victim!",
+        Content = "Please check if victim is still in the server.",
+        Duration = 6.5,
+        Image = 4483362458,
+    })
+        end
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Jail Victim",
+   Callback = function()
+       local originPos = localplayer.Character.HumanoidRootPart.CFrame
+        local jailVictim = game.Players:FindFirstChild(targetUsername)
+        if jailVictim then
+            localplayer.Character.HumanoidRootPart.CFrame = jailpartTP.CFrame
+            localplayer.Backpack.Stroller.Parent = localplayer.Character
+            wait(0.25)
+            jailVictim.Character.HumanoidRootPart.CFrame = localplayer.Character.Stroller.MainPart.CFrame
+            wait(1.25)
+            fireclickdetector(game.Workspace["Police Station"].JailCell.Close.ClickDetector)
+            localplayer.Character.Stroller.Parent = localplayer.Backpack
+            localplayer.Character.HumanoidRootPart.CFrame = originPos
+    elseif not jailVictim then
+        Rayfield:Notify({
+        Title = "Couldnt find victim!",
+        Content = "Please check if victim is still in the server.",
+        Duration = 6.5,
+        Image = 4483362458,
+    })
+        end
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Make player mermaid",
+   Callback = function()
+       local ogPos = localplayer.Character.HumanoidRootPart.CFrame
+       local nakedVictim = game.Players:FindFirstChild(targetUsername)
+       local victimsOgPos = nakedVictim.Character.HumanoidRootPart.CFrame
+       if nakedVictim then
+           localplayer.Character.HumanoidRootPart.CFrame = mermaidpartTP.CFrame
+           localplayer.Backpack.Stroller.Parent = localplayer.Character
+           wait(0.25)
+           nakedVictim.Character.HumanoidRootPart.CFrame = localplayer.Character.Stroller.MainPart.CFrame
+           wait(1.25)
+           localplayer.Character.Stroller.Parent = localplayer.Backpack
+           wait(0.15)
+            for _, descendant in ipairs(workspace:GetDescendants()) do
+                if descendant:IsA("ClickDetector") and descendant.Parent.Name == "Head" then
+                    fireclickdetector(descendant)
+                end
+            end
+           localplayer.Character.HumanoidRootPart.CFrame = victimsOgPos
+           wait(1.25)
+           localplayer.Backpack.Stroller.Parent = localplayer.Character
+           wait(0.05)
+           victimPlayer.Character.HumanoidRootPart.CFrame = localplayer.Character.Stroller.MainPart.CFrame
+           wait(1.25)
+           localplayer.Character.Stroller.Parent = localplayer.Backpack
+           wait(0.05)
+           localplayer.Character.HumanoidRootPart.CFrame = ogPos
+    elseif not nakedVictim then
+        Rayfield:Notify({
+        Title = "Couldnt find victim!",
+        Content = "Please check if victim is still in the server.",
+        Duration = 6.5,
+        Image = 4483362458,
+    })
+        end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Remove rights from player",
+   Callback = function()
+       local ogPos = localplayer.Character.HumanoidRootPart.CFrame
+       local nakedVictim = game.Players:FindFirstChild(targetUsername)
+       local victimsOgPos = nakedVictim.Character.HumanoidRootPart.CFrame
+       if nakedVictim then
+           localplayer.Character.HumanoidRootPart.CFrame = niggerifyTP.CFrame
+           localplayer.Backpack.Stroller.Parent = localplayer.Character
+           wait(0.25)
+           nakedVictim.Character.HumanoidRootPart.CFrame = localplayer.Character.Stroller.MainPart.CFrame
+           wait(1.25)
+           localplayer.Character.HumanoidRootPart.CFrame = victimsOgPos
+           wait(1)
+           localplayer.Character.Stroller.Parent = localplayer.Backpack
+    elseif not nakedVictim then
+        Rayfield:Notify({
+        Title = "Couldnt find victim!",
+        Content = "Please check if victim is still in the server.",
+        Duration = 6.5,
+        Image = 4483362458,
+    })
+        end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Give rights back to player",
+   Callback = function()
+       local ogPos = localplayer.Character.HumanoidRootPart.CFrame
+       local nakedVictim = game.Players:FindFirstChild(targetUsername)
+       local victimsOgPos = nakedVictim.Character.HumanoidRootPart.CFrame
+       if nakedVictim then
+           localplayer.Character.HumanoidRootPart.CFrame = unniggerify.CFrame
+           localplayer.Backpack.Stroller.Parent = localplayer.Character
+           wait(0.25)
+           nakedVictim.Character.HumanoidRootPart.CFrame = localplayer.Character.Stroller.MainPart.CFrame
+           wait(1.25)
+           localplayer.Character.HumanoidRootPart.CFrame = victimsOgPos
+           wait(1)
+           localplayer.Character.Stroller.Parent = localplayer.Backpack
+       elseif not nakedVictim then
+        Rayfield:Notify({
+        Title = "Couldnt find victim!",
+        Content = "Please check if victim is still in the server.",
+        Duration = 6.5,
+        Image = 4483362458,
+    })
+        end
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Make victim buy a house",
+   Callback = function()
+              local ogPos = localplayer.Character.HumanoidRootPart.CFrame
+       local nakedVictim = game.Players:FindFirstChild(targetUsername)
+       local victimsOgPos = nakedVictim.Character.HumanoidRootPart.CFrame
+       if nakedVictim then
+           localplayer.Character.HumanoidRootPart.CFrame = buyhouseTP.CFrame
+           localplayer.Backpack.Stroller.Parent = localplayer.Character
+           wait(0.25)
+           nakedVictim.Character.HumanoidRootPart.CFrame = localplayer.Character.Stroller.MainPart.CFrame
+           wait(1.25)
+           localplayer.Character.HumanoidRootPart.CFrame = victimsOgPos
+           wait(0.5)
+           localplayer.Character.Stroller.Parent = localplayer.Backpack
+           wait(0.1)
+           localplayer.Character.HumanoidRootPart.CFrame = ogPos
+        end   
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Bring victim",
+   Callback = function()
+       local ogBRINGPOS = localplayer.Character.HumanoidRootPart.CFrame
+       local bringPlayerT = game.Players:FindFirstChild(targetUsername)
+       if bringPlayerT then
+           localplayer.Backpack.Stroller.Parent = localplayer.Character
+           wait(0.25)
+           bringPlayerT.Character.HumanoidRootPart.CFrame = localplayer.Character.Stroller.MainPart.CFrame
+           wait(1.25)
+           localplayer.Character.Stroller.Parent = localplayer.Backpack
+        end
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Rainbow Stroller",
+   Callback = function()
+       tool.Equipped:Connect(function()
+            startRainbow()
+        end)
+
+        tool.Unequipped:Connect(function()
+            stopRainbow()
+        end)
+   end,
+})
+
+
+local Tab = Window:CreateTab("Map", 4483362458)
+
+local Button = Tab:CreateButton({
+   Name = "Remove mountain barrier",
+   Callback = function()
+       game.Workspace["Sled Remover"]:Destroy()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Walk on water",
+   Callback = function()
+    local part = Instance.new("Part", game.Workspace)
+    part.Name = "jesusPart"
+    part.Anchored = true
+    part.CFrame = CFrame.new(-493.908112, 29.8297539, -71.2317123, -0.0305963773, 4.46025723e-08, -0.999531806, 1.08285953e-07, 1, 4.13087555e-08, 0.999531806, -1.06971356e-07, -0.0305963773)
+    part.Size = Vector3.new(500, 1, 500)
+    part.Transparency = 1
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "No more walk on water",
+   Callback = function()
+       local findjesuspart = game.Workspace:FindFirstChild("jesusPart")
+       if findjesuspart then
+           game.Workspace.jesusPart:Destroy()
+        else
+            Rayfield:Notify({
+            Title = "Didnt find part.",
+            Content = "Did you use jesus part? If your sure you did, contact the owner on Roblox.",
+            Duration = 6.5,
+            Image = 4483362458,
+    })
+        end
+   end,
+})
+
+local Tab = Window:CreateTab("Cars", 4483362458)
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to paid car spawners",
+   Callback = function()
+       localplayer.Character.HumanoidRootPart.CFrame = cartp.CFrame
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Paid cars without paying",
+   Callback = function()
+
+
+        for _, obj in pairs(workspace:GetDescendants()) do
+            if obj:IsA("Part") and obj.Name == "GAMEPASS KART" then
+                obj:Destroy()
+                print("Destroyed: " .. obj.Name)
+            end
+        end
+
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to police car spawner",
+   Callback = function()
+       localplayer.Character.HumanoidRootPart.CFrame = policeCarTP.CFrame
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Teleport to fire truck spawner",
+   Callback = function()
+       localplayer.Character.HumanoidRootPart.CFrame = firetruckTP.CFrame
+   end,
+})
+
+--[[
+
+
+local part = Instance.new("Part", game.Workspace)
+part.Anchored = true
+part.CFrame = CFrame.new(-493.908112, 29.8297539, -71.2317123, -0.0305963773, 4.46025723e-08, -0.999531806, 1.08285953e-07, 1, 4.13087555e-08, 0.999531806, -1.06971356e-07, -0.0305963773)
+part.Size = Vector3.new(500, 1, 500)
+
+
+]]
