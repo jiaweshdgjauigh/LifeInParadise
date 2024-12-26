@@ -167,7 +167,7 @@ local Window = Rayfield:CreateWindow({
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "v2",
    LoadingSubtitle = "by LoadstringEnabIed",
-   Theme = getgenv().themes, -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -572,3 +572,16 @@ part.Size = Vector3.new(500, 1, 500)
 
 
 ]]
+
+local Tab = Window:CreateTab("Info", 4483362458)
+local amount = 0
+local Label = Tab:CreateLabel("Script creator: regularmacosuser (MAIN)", 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+local Label = Tab:CreateLabel("Time spent using script: ".. amount, 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+while true do
+    amount += 1
+    Label:Set("Time spent using script: ".. amount, 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
+    wait(1)
+end
+Paragraph:Set({Title = "Stroller info", Content = "If you want to use stroller on your victim again after they die, you have to reset. If you cant teleport the victim, reset then it will work."})
+
+local Label = Tab:CreateLabel("Script will keep on getting updates!", 4483362458, Color3.fromRGB(255, 255, 255), false) -- Title, Icon, Color, IgnoreTheme
